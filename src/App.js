@@ -8,6 +8,7 @@ function App(props) {
             <Switch>
                 <Route exact path="/" render={() => <div>Route /</div>} />
                 <Route path="/app" render={() => <div>Route /app</div>} />
+                <Route render={() => <div>Route inconnue</div>} />
             </Switch>
         </div>
     );
