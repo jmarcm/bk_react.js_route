@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 function App(props) {
     return (
         <div className="App">
-            <Route path="/" render={() => <div>Route /</div>} />
-            <Route path="/app" render={() => <div>Route /app</div>} />
+            <Switch>
+                <Route path="/" render={() => <div>Route /</div>} />
+                <Route path="/app" render={() => <div>Route /app</div>} />
+            </Switch>
         </div>
     );
 }
