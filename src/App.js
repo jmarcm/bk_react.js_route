@@ -11,7 +11,11 @@ function App(props) {
             <Route
                 exact
                 path="/"
-                render={() => <ListeELements elems={elems} />}
+                render={(props) => <ListeELements {...props} elems={elems} />}
+            />
+            <Route
+                path="/edit/:index"
+                render={(props) => <ListeELements {...props} elems={elems} />}
             />
             <Route path="/app" render={() => <div>Route /app</div>} />
             <Route render={() => <div>Route inconnue</div>} />
