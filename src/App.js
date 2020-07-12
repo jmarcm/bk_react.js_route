@@ -6,7 +6,7 @@ function App(props) {
     return (
         <div className="App">
             <Switch>
-                <Route path="/" render={() => <div>Route /</div>} />
+                <Route exact path="/" render={() => <div>Route /</div>} />
                 <Route path="/app" render={() => <div>Route /app</div>} />
             </Switch>
         </div>
