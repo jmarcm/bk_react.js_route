@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
+
+import createBrowserHistory from 'history/createBrowserHistory';
+const customHistory = createBrowserHistory();
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
+    <Router history={customHistory}>
+        <App history={customHistory} />
+    </Router>,
     document.getElementById("root")
 );
 

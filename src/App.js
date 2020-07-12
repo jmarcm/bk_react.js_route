@@ -1,15 +1,23 @@
 import React from "react";
 import "./App.css";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import ListeELements from "./ListeElements";
 
 function App(props) {
-    var elems = ["Element1", "Element2", "Element3", "Element4", "Element5"];
+	var elems = ["Element1", "Element2", "Element3", "Element4", "Element5"];
+	
+	function handlerClickFullList() {
+		props.history.push("/");
+	}
+
+	function handlerClickIndex2() {
+		props.history.push("/edit/2");
+	}
     return (
         <div>
-            <Link to="/">Liste complète</Link> &nbsp;&nbsp;
-            <Link to="/edit/2">Index 2</Link>
+            <button onClick={handlerClickFullList}>Liste complète</button> &nbsp;&nbsp;
+			<button onClick={handlerClickIndex2}>Index 2</button>
 
             <Switch>
                 <Route
